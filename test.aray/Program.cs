@@ -31,17 +31,26 @@ namespace test.aray
             Console.WriteLine(aray2[2]);
 
             int[] a = new int[10000];
-            for (int i = 0; i < 10000; i++)
-            { 
-                a[i] = (i + 1)*2;
+            for (int i = 0; i < a.Length; i++)
+            {
+                a[i] = (i + 1) * 2;
             }
-                Console.Write("[");
+            int r;
+            for (int i = 0; i < a.Length / 2; i++)
+            {
+                r = a[a.Length - 1 - i];
+                a[a.Length - 1 - i] = (i + 1);
+                a[i] = r;
+
+
+            }
+            Console.Write("[");
 
             for (int i = 0; i < a.Length - 1; i++)
             {
-                Console.Write($"{a[i]},");    
+                Console.Write($"{a[i]},");
             }
-            Console.Write(a.Length*2);
+            Console.Write(a[a.Length - 1]);
             { 
             Console.Write("]");
             
