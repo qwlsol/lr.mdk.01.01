@@ -33,17 +33,18 @@ namespace test.aray
             int[] a = new int[10000];
             for (int i = 0; i < 10000; i++)
             { 
-                a[i] = i + 1;
+                a[i] = (i + 1)*2;
             }
                 Console.Write("[");
 
             for (int i = 0; i < a.Length - 1; i++)
             {
-                Console.Write($"{a[i]},");
-                
+                Console.Write($"{a[i]},");    
             }
+            Console.Write(a.Length*2);
+            { 
             Console.Write("]");
-            {
+            
                
             }
                
