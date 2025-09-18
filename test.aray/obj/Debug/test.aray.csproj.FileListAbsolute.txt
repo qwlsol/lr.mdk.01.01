@@ -1,0 +1,7 @@
+D:\P-30\test.aray\bin\Debug\test.aray.exe.config
+D:\P-30\test.aray\bin\Debug\test.aray.exe
+D:\P-30\test.aray\bin\Debug\test.aray.pdb
+D:\P-30\test.aray\obj\Debug\test.aray.csproj.AssemblyReference.cache
+D:\P-30\test.aray\obj\Debug\test.aray.csproj.CoreCompileInputs.cache
+D:\P-30\test.aray\obj\Debug\test.aray.exe
+D:\P-30\test.aray\obj\Debug\test.aray.pdb
