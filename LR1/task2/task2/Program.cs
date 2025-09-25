@@ -15,6 +15,8 @@ namespace task2
             Random rnd = new Random();
             int[] random = new int[3000];
 
+            for (int i = 0; i < random.Length; i++)
+            random[i] = rnd.Next(10, 10000);
         }
     }
 }
