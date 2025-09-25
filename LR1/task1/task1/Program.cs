@@ -31,6 +31,8 @@ namespace task1
                 else
                     oNumb++;
             }
+            Console.WriteLine($"Количество чётных: {eNumb}");
+            Console.WriteLine($"Количество нечётных: {oNumb}");
         }
     }
 }
