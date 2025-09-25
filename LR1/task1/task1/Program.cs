@@ -23,6 +23,14 @@ namespace task1
             }
             int eNumb = 0;//четные
             int oNumb = 0;//нечетные
+
+            foreach (var num in a)
+            {
+                if (num % 2 == 0)
+                    eNumb++;
+                else
+                    oNumb++;
+            }
         }
     }
 }
