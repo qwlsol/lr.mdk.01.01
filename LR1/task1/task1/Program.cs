@@ -14,6 +14,13 @@ namespace task1
 
             Console.Write("Введите размер массива N: ");
             int n = Convert.ToInt32(Console.ReadLine());
+
+            int[] a = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write($"{i + 1}-ое число: ");
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
         }
     }
 }
