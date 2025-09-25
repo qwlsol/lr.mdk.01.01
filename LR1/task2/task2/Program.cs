@@ -17,6 +17,8 @@ namespace task2
 
             for (int i = 0; i < random.Length; i++)
             random[i] = rnd.Next(10, 10000);
+
+            List<int> sum = new List<int>();
         }
     }
 }
