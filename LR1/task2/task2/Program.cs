@@ -19,6 +19,11 @@ namespace task2
             random[i] = rnd.Next(10, 10000);
 
             List<int> sum = new List<int>();
+
+            for (int i = 0; i + 1 < random.Length; i += 2)
+            {
+                sum.Add(random[i] + random[i + 1]);
+            }
         }
     }
 }
