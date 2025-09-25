@@ -21,6 +21,8 @@ namespace task1
                 Console.Write($"{i + 1}-ое число: ");
                 a[i] = Convert.ToInt32(Console.ReadLine());
             }
+            int eNumb = 0;//четные
+            int oNumb = 0;//нечетные
         }
     }
 }
