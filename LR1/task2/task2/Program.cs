@@ -20,10 +20,13 @@ namespace task2
 
             List<int> sum = new List<int>();
 
+            Console.Write("[");
+
             for (int i = 0; i + 1 < random.Length; i += 2)
             {
                 sum.Add(random[i] + random[i + 1]);
             }
+            Console.WriteLine(string.Join(",", sum) + "]");
         }
     }
 }
