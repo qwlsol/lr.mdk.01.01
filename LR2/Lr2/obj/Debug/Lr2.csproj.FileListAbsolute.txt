@@ -1,0 +1,8 @@
+E:\LR2\Lr2\Lr2\bin\Debug\Lr2.exe.config
+E:\LR2\Lr2\Lr2\bin\Debug\Lr2.exe
+E:\LR2\Lr2\Lr2\bin\Debug\Lr2.pdb
+E:\LR2\Lr2\Lr2\obj\Debug\Lr2.csproj.AssemblyReference.cache
+E:\LR2\Lr2\Lr2\obj\Debug\Lr2.csproj.CoreCompileInputs.cache
+E:\LR2\Lr2\Lr2\obj\Debug\Lr2.exe
+E:\LR2\Lr2\Lr2\obj\Debug\Lr2.pdb
+E:\LR2\Lr2\Lr2\obj\Debug\Lr2.exe.config
