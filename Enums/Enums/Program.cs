@@ -19,8 +19,8 @@ namespace Enums
     class Program
     {
         static void Main()
-        { 
-           
+        {
+            DayOfWeek dayFromSystem = DateTime.Now.DayOfWeek;
 
         }
     }
