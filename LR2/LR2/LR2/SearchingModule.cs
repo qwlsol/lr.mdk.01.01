@@ -20,5 +20,12 @@ namespace LR2
             }
             return -1;
         }
+
+        static public (List<string>, List<double>) FindAllPhonesByBrand(int indexBrand,
+                                                                     List<string>[] allPhones,
+                                                                     List<double>[] counts)
+        {
+
+        }
     }
 }
