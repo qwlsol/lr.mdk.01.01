@@ -8,5 +8,10 @@ namespace LR2
 {
     internal class MobileSalesSystem
     {
+        static public (List<string>[], List<double>[]) InputPhonesByBrand()
+        {
+          
+        }
+
     }
 }
