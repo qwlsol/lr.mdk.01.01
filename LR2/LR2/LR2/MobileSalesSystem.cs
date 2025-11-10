@@ -32,6 +32,8 @@ namespace LR2
 
             phonesByBrand[2].Add("P60 Pro");
             weeklySales[2].Add(6);
+
+            return (phonesByBrand, weeklySales);
         }
 
     }
