@@ -8,6 +8,8 @@ namespace LR2
 {
     internal class Program
     {
+        public static object InputModule { get; private set; }
+
         static void Sale(List<string> phones, List<double> averages)
         {
             Console.WriteLine("Список телефонов от самых продаваемых к наименее популярным:");
@@ -18,9 +20,10 @@ namespace LR2
             }
         }
         
-        static void Main(string[] args)
+        static void Main(string[] args, (object phones, object counts) value)
         {
             string[] brands = new string[] { "IPhone", "Samsung", "Huawei" };
+            var (phones, counts) = InputModule.InputPhonesByBrand();
 
         }
     }
