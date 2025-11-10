@@ -14,7 +14,11 @@ namespace LR2
             {
                 for (int j = 0; j < sales.Count - 1; ++j)
                 {
+                    bool condition = sales[j + 1] > sales[j];
+                    if (condition)
+                    {
 
+                    }    
                 }    
             }
 
