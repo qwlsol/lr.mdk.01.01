@@ -8,6 +8,10 @@ namespace LR2
 {
     internal class Program
     {
+        static void Sale(List<string> phones, List<double> averages)
+        {
+
+        }
         static void Main(string[] args)
         {
 
