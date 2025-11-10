@@ -14,7 +14,10 @@ namespace LR2
                                                                 new List<string>(),
                                                                 new List<string>()
             };
-
+            List<double>[] weeklySales = new List<double>[3]{ new List<double>(),
+                                                   new List<double>(),
+                                                   new List<double>()
+            };
         }
 
     }
