@@ -10,6 +10,7 @@ namespace LR2
     {
         static void Sale(List<string> phones, List<double> averages)
         {
+            Console.WriteLine("Список телефонов от самых продаваемых к наименее популярным:");
 
         }
         static void Main(string[] args)
