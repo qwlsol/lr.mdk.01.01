@@ -26,6 +26,13 @@ namespace LR2
             var (phones, counts) = InputModule.InputPhonesByBrand();
 
             string userQuery = InputModule.InputUserQuery();
+
+            int indexBrand = SearchingModule.FindIndexBrand(userQuery, brands);
+            if (indexBrand < 0)
+            {
+                Console.WriteLine("Указана несуществующая марка");
+                return;
+            }
         }
     }
 }
