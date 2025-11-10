@@ -15,9 +15,10 @@ namespace LR2
                 string valueBrand = brands[index].ToLower();
                 if (valueBrand == userQuery.ToLower())
                 {
-
-                }    
+                    return index;
+                }
             }
+            return -1;
         }
     }
 }
