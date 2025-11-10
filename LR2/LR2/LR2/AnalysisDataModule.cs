@@ -32,7 +32,10 @@ namespace LR2
         static public double CalculateAverage(List<double> sales)
         {
             double sum = 0;
-
+            foreach (double sale in sales)
+            {
+                sum += sale;
+            }
         }
     }
 }
