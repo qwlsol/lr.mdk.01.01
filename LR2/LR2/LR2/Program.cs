@@ -20,6 +20,7 @@ namespace LR2
         
         static void Main(string[] args)
         {
+            string[] brands = new string[] { "IPhone", "Samsung", "Huawei" };
 
         }
     }
