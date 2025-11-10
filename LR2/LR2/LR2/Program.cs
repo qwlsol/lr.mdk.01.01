@@ -12,6 +12,10 @@ namespace LR2
         {
             Console.WriteLine("Список телефонов от самых продаваемых к наименее популярным:");
 
+            for (int i = 0; i < phones.Count; i++)
+            {
+
+            }
         }
         static void Main(string[] args)
         {
