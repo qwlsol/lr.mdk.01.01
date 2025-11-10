@@ -25,6 +25,7 @@ namespace LR2
             string[] brands = new string[] { "IPhone", "Samsung", "Huawei" };
             var (phones, counts) = InputModule.InputPhonesByBrand();
 
+            string userQuery = InputModule.InputUserQuery();
         }
     }
 }
