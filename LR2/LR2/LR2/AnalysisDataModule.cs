@@ -21,6 +21,9 @@ namespace LR2
                         sales[j] = sales[j + 1];
                         sales[j + 1] = temp_sales;
 
+                        string temp_phones = phones[j];
+                        phones[j] = phones[j + 1];
+                        phones[j + 1] = temp_phones;
                     }    
                 }    
             }
