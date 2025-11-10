@@ -10,6 +10,10 @@ namespace LR2
     {
         static public void SortPhones(List<string> phones, List<double> sales)
         {
+            for (int i = 0; i < sales.Count; ++i)
+            {
+
+            }
 
         }
     }
