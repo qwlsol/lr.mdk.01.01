@@ -12,7 +12,10 @@ namespace LR2
         {
             for (int i = 0; i < sales.Count; ++i)
             {
+                for (int j = 0; j < sales.Count - 1; ++j)
+                {
 
+                }    
             }
 
         }
