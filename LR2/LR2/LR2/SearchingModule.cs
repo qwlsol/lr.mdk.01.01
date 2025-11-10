@@ -30,6 +30,8 @@ namespace LR2
 
             phonesByBrand = allPhones[indexBrand];
             salesByBrand = counts[indexBrand];
+
+            return (phonesByBrand, salesByBrand);
         }
     }
 }
