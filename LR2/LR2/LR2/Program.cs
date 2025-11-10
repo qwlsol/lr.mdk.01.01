@@ -35,6 +35,7 @@ namespace LR2
             }
             var (phonesUserBrand, salesUserBrand) = SearchingModule.FindAllPhonesByBrand(indexBrand, phones, counts);
             AnalysisDataModule.SortPhones(phonesUserBrand, salesUserBrand);
+            Sale(phonesUserBrand, salesUserBrand);
         }
     }
 }
