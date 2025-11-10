@@ -25,6 +25,12 @@ namespace LR2
             phonesByBrand[0].Add("iPhone SE");
             weeklySales[0].Add(3);
 
+            phonesByBrand[1].Add("Galaxy S23");
+            weeklySales[1].Add(12);
+            phonesByBrand[1].Add("Galaxy A54");
+            weeklySales[1].Add(18);
+
+
         }
 
     }
