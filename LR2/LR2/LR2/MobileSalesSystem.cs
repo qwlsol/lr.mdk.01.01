@@ -37,7 +37,7 @@ namespace LR2
         }
         static public string InputUserQuery()
         {
-
+            Console.Write("Введите, пожалуйста, марку телефона (IPhone/Samsung/Huawei): ");
         }
     }
 }
