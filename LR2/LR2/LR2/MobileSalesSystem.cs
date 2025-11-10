@@ -30,7 +30,8 @@ namespace LR2
             phonesByBrand[1].Add("Galaxy A54");
             weeklySales[1].Add(18);
 
-
+            phonesByBrand[2].Add("P60 Pro");
+            weeklySales[2].Add(6);
         }
 
     }
