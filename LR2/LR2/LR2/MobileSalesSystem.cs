@@ -18,6 +18,13 @@ namespace LR2
                                                    new List<double>(),
                                                    new List<double>()
             };
+            phonesByBrand[0].Add("iPhone 14");
+            weeklySales[0].Add(15);
+            phonesByBrand[0].Add("iPhone 13");
+            weeklySales[0].Add(8);
+            phonesByBrand[0].Add("iPhone SE");
+            weeklySales[0].Add(3);
+
         }
 
     }
