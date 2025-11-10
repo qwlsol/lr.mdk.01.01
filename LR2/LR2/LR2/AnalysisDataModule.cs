@@ -36,6 +36,7 @@ namespace LR2
             {
                 sum += sale;
             }
+            return sum / sales.Count;
         }
     }
 }
