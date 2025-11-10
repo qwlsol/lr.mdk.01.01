@@ -8,5 +8,9 @@ namespace LR2
 {
     internal class SearchingModule
     {
+        static public int FindIndexBrand(string userQuery, string[] brands)
+        {
+
+        }
     }
 }
