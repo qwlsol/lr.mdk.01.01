@@ -10,7 +10,10 @@ namespace LR2
     {
         static public int FindIndexBrand(string userQuery, string[] brands)
         {
+            for (int index = 0; index < brands.Length; ++index)
+            {
 
+            }
         }
     }
 }
