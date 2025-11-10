@@ -10,7 +10,11 @@ namespace LR2
     {
         static public (List<string>[], List<double>[]) InputPhonesByBrand()
         {
-          
+            List<string>[] phonesByBrand = new List<string>[3] { new List<string>(),
+                                                                new List<string>(),
+                                                                new List<string>()
+            };
+
         }
 
     }
