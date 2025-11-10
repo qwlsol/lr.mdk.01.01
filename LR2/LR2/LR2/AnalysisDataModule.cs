@@ -8,5 +8,9 @@ namespace LR2
 {
     internal class AnalysisDataModule
     {
+        static public void SortPhones(List<string> phones, List<double> sales)
+        {
+
+        }
     }
 }
