@@ -27,6 +27,9 @@ namespace LR2
         {
             List<string> phonesByBrand = new List<string>();
             List<double> salesByBrand = new List<double>();
+
+            phonesByBrand = allPhones[indexBrand];
+            salesByBrand = counts[indexBrand];
         }
     }
 }
