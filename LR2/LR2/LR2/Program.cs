@@ -14,9 +14,10 @@ namespace LR2
 
             for (int i = 0; i < phones.Count; i++)
             {
-
+                Console.WriteLine($"{i + 1}. {phones[i]} - средние продажи: {averages[i]} шт./неделю");
             }
         }
+        
         static void Main(string[] args)
         {
 
