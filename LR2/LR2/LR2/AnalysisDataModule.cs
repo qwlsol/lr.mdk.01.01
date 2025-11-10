@@ -17,6 +17,9 @@ namespace LR2
                     bool condition = sales[j + 1] > sales[j];
                     if (condition)
                     {
+                        double temp_sales = sales[j];
+                        sales[j] = sales[j + 1];
+                        sales[j + 1] = temp_sales;
 
                     }    
                 }    
