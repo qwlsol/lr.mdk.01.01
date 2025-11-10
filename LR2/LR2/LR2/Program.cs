@@ -33,6 +33,8 @@ namespace LR2
                 Console.WriteLine("Указана несуществующая марка");
                 return;
             }
+            var (phonesUserBrand, salesUserBrand) = SearchingModule.FindAllPhonesByBrand(indexBrand, phones, counts);
+
         }
     }
 }
