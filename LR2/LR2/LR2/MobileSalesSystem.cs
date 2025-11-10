@@ -35,6 +35,9 @@ namespace LR2
 
             return (phonesByBrand, weeklySales);
         }
+        static public string InputUserQuery()
+        {
 
+        }
     }
 }
