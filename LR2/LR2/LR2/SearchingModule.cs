@@ -25,7 +25,8 @@ namespace LR2
                                                                      List<string>[] allPhones,
                                                                      List<double>[] counts)
         {
-
+            List<string> phonesByBrand = new List<string>();
+            List<double> salesByBrand = new List<double>();
         }
     }
 }
