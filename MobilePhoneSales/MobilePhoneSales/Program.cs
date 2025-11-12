@@ -46,6 +46,12 @@ namespace MobilePhoneSales
         }
         static void TopTwoProfitable(string[] phones, int[] sales, int[] prices, int[] costs)
         {
+            int[] profits = new int[phones.Length];
+
+            for (int i = 0; i < phones.Length; i++)
+            {
+                profits[i] = (prices[i] - costs[i]) * sales[i];
+            }
 
         }
         static void Main(string[] args)
