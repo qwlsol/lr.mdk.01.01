@@ -8,6 +8,7 @@ namespace MobilePhoneSales
 {
     internal class Program
     {
+        
         static int AllSums(int[] price, int[] AmountSaled, DataTime[] Time)
         {
             Console.WriteLine("Выберите номер нужного переода ");
@@ -42,8 +43,17 @@ namespace MobilePhoneSales
                 Console.WriteLine($"Самый продаваемый: {bestPhone} - {maxSales} шт.");
                 Console.WriteLine($"Наименее продаваемый: {worstPhone} - {minSales} шт.");
             }
+        }
+        static void TopTwoProfitable(string[] phones, int[] sales, int[] prices, int[] costs)
+        {
+
+        }
         static void Main(string[] args)
         {
+
         }
+
+
+
     }
 }
