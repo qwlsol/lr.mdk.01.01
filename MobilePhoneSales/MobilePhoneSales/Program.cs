@@ -20,6 +20,10 @@ namespace MobilePhoneSales
 
             return price[InputUser] * AmountSaled[InputUser];
         }
+        static void FindBestWorseSels(string[] phones, int[] sales)
+        {
+
+        }
         static void Main(string[] args)
         {
         }
