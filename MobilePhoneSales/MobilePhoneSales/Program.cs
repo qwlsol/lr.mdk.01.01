@@ -10,8 +10,12 @@ namespace MobilePhoneSales
     {
         static int AllSums(int[] price, int[] AmountSaled, DataTime[] Time)
         {
-            int AllSum = 0;
             Console.WriteLine("Выберите номер нужного переода ");
+
+            for (int index = 0; index < Time.Length; index++)
+            {
+                Console.WriteLine($"Период {index} - " + Time[index]);
+            }
 
         }
         static void Main(string[] args)
