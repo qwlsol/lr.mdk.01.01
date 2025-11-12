@@ -9,7 +9,7 @@ namespace MobilePhoneSales
     internal class Program
     {
         
-        static int AllSums(int[] price, int[] AmountSaled, DataTime[] Time)
+        static int AllSums(int[] price, int[] AmountSaled, DateTime[] Time)
         {
             Console.WriteLine("Выберите номер нужного переода ");
 
@@ -82,6 +82,10 @@ namespace MobilePhoneSales
             int[] phoneCosts = { 85000, 65000, 18000, 55000, 42000, 52000 };
             int[] totalSales = { 35, 42, 95, 28, 45, 32 };
 
+            DateTime[] dates = {new DateTime(2025, 11, 1), new DateTime(2025, 11, 2), new DateTime(2025, 12, 3), new DateTime(2025, 11, 4),new DateTime(2025, 11, 5) };
+            int[] dayPrices = { 120000, 90000, 25000, 80000, 60000 };
+            int[] daySales = { 3, 4, 8, 2, 5 };
+            
         }
 
 
