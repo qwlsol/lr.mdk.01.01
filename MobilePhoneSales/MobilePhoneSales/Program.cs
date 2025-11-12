@@ -56,6 +56,16 @@ namespace MobilePhoneSales
             int secondMax = 0;
             string firstPhone = "";
             string secondPhone = "";
+            for (int i = 0; i < profits.Length; i++)
+            {
+                if (profits[i] > firstMax)
+                {
+                    secondMax = firstMax;
+                    secondPhone = firstPhone;
+                    firstMax = profits[i];
+                    firstPhone = phones[i];
+                }
+            }
         }
         static void Main(string[] args)
         {
