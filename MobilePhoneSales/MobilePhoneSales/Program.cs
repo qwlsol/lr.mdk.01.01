@@ -77,6 +77,10 @@ namespace MobilePhoneSales
         }
         static void Main(string[] args)
         {
+            string[] phoneModels = { "iPhone 17", "Samsung A24", "Huawei P60", "iPhone 8", "Xiaomi Redmi Note 10", "OnePlus 11" };
+            int[] phonePrices = { 120000, 90000, 25000, 80000, 60000, 75000 };
+            int[] phoneCosts = { 85000, 65000, 18000, 55000, 42000, 52000 };
+            int[] totalSales = { 35, 42, 95, 28, 45, 32 };
 
         }
 
