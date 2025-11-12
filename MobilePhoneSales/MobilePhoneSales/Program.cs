@@ -65,6 +65,11 @@ namespace MobilePhoneSales
                     firstMax = profits[i];
                     firstPhone = phones[i];
                 }
+                else if (profits[i] > secondMax)
+                {
+                    secondMax = profits[i];
+                    secondPhone = phones[i];
+                }
             }
         }
         static void Main(string[] args)
