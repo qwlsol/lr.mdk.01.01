@@ -85,7 +85,14 @@ namespace MobilePhoneSales
             DateTime[] dates = {new DateTime(2025, 11, 1), new DateTime(2025, 11, 2), new DateTime(2025, 12, 3), new DateTime(2025, 11, 4),new DateTime(2025, 11, 5) };
             int[] dayPrices = { 120000, 90000, 25000, 80000, 60000 };
             int[] daySales = { 3, 4, 8, 2, 5 };
-            
+
+            Console.WriteLine("Сумма за период");
+            int sum = AllSums(dayPrices, daySales, dates);
+            Console.WriteLine($"Сумма продаж: {sum} руб.");
+            Console.WriteLine("Анализ продаж");
+            FindBestWorseSels(phoneModels, totalSales);
+            Console.WriteLine("Наибольшая прибыль");
+            TopTwoProfitable(phoneModels, totalSales, phonePrices, phoneCosts);
         }
 
 
