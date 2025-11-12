@@ -71,6 +71,9 @@ namespace MobilePhoneSales
                     secondPhone = phones[i];
                 }
             }
+            Console.WriteLine($"Топ 2 по прибыли:");
+            Console.WriteLine($"Первый. {firstPhone} - {firstMax} руб.");
+            Console.WriteLine($"Второй. {secondPhone} - {secondMax} руб.");
         }
         static void Main(string[] args)
         {
