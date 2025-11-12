@@ -22,7 +22,10 @@ namespace MobilePhoneSales
         }
         static void FindBestWorseSels(string[] phones, int[] sales)
         {
-
+            int maxSales = sales[0];
+            int minSales = sales[0];
+            string bestPhone = phones[0];
+            string worstPhone = phones[0];
         }
         static void Main(string[] args)
         {
