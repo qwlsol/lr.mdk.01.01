@@ -16,7 +16,7 @@ namespace MobilePhoneSales
             {
                 Console.WriteLine($"Период {index} - " + Time[index]);
             }
-
+            int InputUser = Convert.ToInt32(Console.ReadLine());
         }
         static void Main(string[] args)
         {
