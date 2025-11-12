@@ -39,7 +39,9 @@ namespace MobilePhoneSales
                     minSales = sales[i];
                     worstPhone = phones[i];
                 }
-        }
+                Console.WriteLine($"Самый продаваемый: {bestPhone} - {maxSales} шт.");
+                Console.WriteLine($"Наименее продаваемый: {worstPhone} - {minSales} шт.");
+            }
         static void Main(string[] args)
         {
         }
