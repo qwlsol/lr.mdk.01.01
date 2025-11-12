@@ -52,7 +52,10 @@ namespace MobilePhoneSales
             {
                 profits[i] = (prices[i] - costs[i]) * sales[i];
             }
-
+            int firstMax = 0;
+            int secondMax = 0;
+            string firstPhone = "";
+            string secondPhone = "";
         }
         static void Main(string[] args)
         {
