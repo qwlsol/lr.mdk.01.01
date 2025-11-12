@@ -26,6 +26,19 @@ namespace MobilePhoneSales
             int minSales = sales[0];
             string bestPhone = phones[0];
             string worstPhone = phones[0];
+
+            for (int i = 1; i < sales.Length; i++)
+            {
+                if (sales[i] > maxSales)
+                {
+                    maxSales = sales[i];
+                    bestPhone = phones[i];
+                }
+                if (sales[i] < minSales)
+                {
+                    minSales = sales[i];
+                    worstPhone = phones[i];
+                }
         }
         static void Main(string[] args)
         {
