@@ -10,7 +10,10 @@ namespace L2new
     {
         static void AddApplicant(Dictionary<string, List<Applicant>> applicants, string name, string specialty, int[] grades)
         {
-
+            Applicant newApplicant = new Applicant();
+            newApplicant.fullName = name;
+            newApplicant.specialty = specialty;
+            newApplicant.grades = grades;
         }
         static void Main(string[] args)
         {
