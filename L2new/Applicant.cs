@@ -24,5 +24,6 @@ namespace L2new
             return sum / grades.Length;
 
         }
+
     }
 }

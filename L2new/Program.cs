@@ -21,6 +21,10 @@ namespace L2new
             }
             applicants[specialty].Add(newApplicant);
         }
+        static void SortApplicantsByAverage(List<Applicant> applicantList)
+        {
+
+        }
         static void Main(string[] args)
         {
 
