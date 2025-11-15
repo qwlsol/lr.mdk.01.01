@@ -36,7 +36,11 @@ namespace L2new
                 }
             }
         }
-            static void Main(string[] args)
+        static void ShowApplicantsBySpecialty(Dictionary<string, List<Applicant>> applicants, string specialty)
+        {
+
+        }
+        static void Main(string[] args)
         {
 
         }
