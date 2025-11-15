@@ -19,6 +19,7 @@ namespace L2new
             {
                 applicants[specialty] = new List<Applicant>();
             }
+            applicants[specialty].Add(newApplicant);
         }
         static void Main(string[] args)
         {
