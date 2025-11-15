@@ -14,6 +14,11 @@ namespace L2new
             newApplicant.fullName = name;
             newApplicant.specialty = specialty;
             newApplicant.grades = grades;
+
+            if (!applicants.ContainsKey(specialty))
+            {
+                applicants[specialty] = new List<Applicant>();
+            }
         }
         static void Main(string[] args)
         {
