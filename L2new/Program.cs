@@ -59,7 +59,18 @@ namespace L2new
         }
         static Dictionary<string, List<Applicant>> CreateTestData()
         {
+            Dictionary<string, List<Applicant>> applicants = new Dictionary<string, List<Applicant>>();
 
+            AddApplicant(applicants, "Иванов Иван", "Программирование", new int[] { 5, 4, 5, 4 });
+            AddApplicant(applicants, "Петров Петр", "Программирование", new int[] { 4, 4, 3, 5 });
+            AddApplicant(applicants, "Сидорова Анна", "Программирование", new int[] { 5, 5, 5, 5 });
+
+            AddApplicant(applicants, "Козлова Мария", "Дизайн", new int[] { 4, 5, 4, 4 });
+            AddApplicant(applicants, "Николаев Алексей", "Дизайн", new int[] { 3, 4, 4, 3 });
+
+            AddApplicant(applicants, "Федоров Дмитрий", "Экономика", new int[] { 5, 4, 5, 5 });
+
+            return applicants;
         }
         static void Main(string[] args)
         {
