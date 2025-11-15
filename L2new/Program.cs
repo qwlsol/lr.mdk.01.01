@@ -72,8 +72,11 @@ namespace L2new
 
             return applicants;
         }
-        static void Main(string[] args)
+        static void Main()
         {
+            Dictionary<string, List<Applicant>> applicants = CreateTestData();
+
+            Console.WriteLine("Система учета абитуриентов");
 
         }
     }
