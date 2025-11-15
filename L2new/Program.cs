@@ -28,8 +28,15 @@ namespace L2new
                 for (int j = i + 1; j < applicantList.Count; j++)
                 {
                     if (applicantList[i].GetAverageGrade() < applicantList[j].GetAverageGrade())
+                    {
+                        Applicant temp = applicantList[i];
+                        applicantList[i] = applicantList[j];
+                        applicantList[j] = temp;
+                    }
+                }
+            }
         }
-        static void Main(string[] args)
+            static void Main(string[] args)
         {
 
         }
