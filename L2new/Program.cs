@@ -57,6 +57,10 @@ namespace L2new
                 Console.WriteLine("Специальность "+specialty+" не найдена.");
             }
         }
+        static Dictionary<string, List<Applicant>> CreateTestData()
+        {
+
+        }
         static void Main(string[] args)
         {
 
