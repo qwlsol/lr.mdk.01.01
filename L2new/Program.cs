@@ -23,7 +23,11 @@ namespace L2new
         }
         static void SortApplicantsByAverage(List<Applicant> applicantList)
         {
-
+            for (int i = 0; i < applicantList.Count - 1; i++)
+            {
+                for (int j = i + 1; j < applicantList.Count; j++)
+                {
+                    if (applicantList[i].GetAverageGrade() < applicantList[j].GetAverageGrade())
         }
         static void Main(string[] args)
         {
