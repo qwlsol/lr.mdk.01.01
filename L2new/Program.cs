@@ -45,8 +45,17 @@ namespace L2new
                 SortApplicantsByAverage(specialtyApplicants);
 
                 Console.WriteLine("Абитуриенты специальности "+ specialty + ":");
-            }
 
+                for (int i = 0; i < specialtyApplicants.Count; i++)
+                {
+                    double average = specialtyApplicants[i].GetAverageGrade();
+                    Console.WriteLine($"{i + 1}. {specialtyApplicants[i].fullName} - средний балл: {average:F2}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Специальность "+specialty+" не найдена.");
+            }
         }
         static void Main(string[] args)
         {
