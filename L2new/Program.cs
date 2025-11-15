@@ -44,7 +44,7 @@ namespace L2new
 
                 SortApplicantsByAverage(specialtyApplicants);
 
-                Console.WriteLine("Абитуриенты специальности "+ specialty + ":");
+                Console.WriteLine("Абитуриенты специальности " + specialty + ":");
 
                 for (int i = 0; i < specialtyApplicants.Count; i++)
                 {
@@ -54,7 +54,7 @@ namespace L2new
             }
             else
             {
-                Console.WriteLine("Специальность "+specialty+" не найдена.");
+                Console.WriteLine("Специальность " + specialty + " не найдена.");
             }
         }
         static Dictionary<string, List<Applicant>> CreateTestData()
@@ -75,9 +75,16 @@ namespace L2new
         static void Main()
         {
             Dictionary<string, List<Applicant>> applicants = CreateTestData();
-
             Console.WriteLine("Система учета абитуриентов");
+            { 
+                Console.WriteLine("Введите название специальности:");
+                string input = Console.ReadLine();
+                if (input.Length > 0)
+                {
+                    ShowApplicantsBySpecialty(applicants, input);
+                }
 
+            }
         }
     }
 }
