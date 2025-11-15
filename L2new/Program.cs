@@ -38,7 +38,10 @@ namespace L2new
         }
         static void ShowApplicantsBySpecialty(Dictionary<string, List<Applicant>> applicants, string specialty)
         {
-
+            if (applicants.ContainsKey(specialty))
+            {
+                List<Applicant> specialtyApplicants = applicants[specialty];
+            }
         }
         static void Main(string[] args)
         {
