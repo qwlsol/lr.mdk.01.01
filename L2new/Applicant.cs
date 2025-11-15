@@ -11,5 +11,13 @@ namespace L2new
         public string fullName;
         public string specialty;
         public int[] grades;
+
+        public double GetAverageGrade()
+        {
+            if (grades == null || grades.Length == 0)
+                return 0;
+
+            double sum = 0;
+        }
     }
 }
