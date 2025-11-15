@@ -41,7 +41,12 @@ namespace L2new
             if (applicants.ContainsKey(specialty))
             {
                 List<Applicant> specialtyApplicants = applicants[specialty];
+
+                SortApplicantsByAverage(specialtyApplicants);
+
+                Console.WriteLine("Абитуриенты специальности "+ specialty + ":");
             }
+
         }
         static void Main(string[] args)
         {
