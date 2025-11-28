@@ -8,6 +8,12 @@ namespace L2new
 {
     public class DisplayManager
     {
+        private GradeCalculator calculator;
 
+        public DisplayManager()
+        {
+            calculator = new GradeCalculator();
+        }
     }
 }
+
