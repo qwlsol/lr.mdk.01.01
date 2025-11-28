@@ -8,5 +8,7 @@ namespace L2new
 {
     internal class ApplicantManager
     {
+        private Dictionary<string, List<Applicant>> applicants;
+        private GradeCalculator calculator;
     }
 }
