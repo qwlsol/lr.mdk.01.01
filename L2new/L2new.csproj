@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Applicant.cs" />
     <Compile Include="ApplicantManager.cs" />
+    <Compile Include="DisplayManager.cs" />
     <Compile Include="GradeCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

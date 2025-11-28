@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace L2new
 {
-    internal class ApplicantManager
+    public class ApplicantManager
     {
         private Dictionary<string, List<Applicant>> applicants;
         private GradeCalculator calculator;

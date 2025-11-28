@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace L2new
 {
-    public class Applicant
+    public class DisplayManager
     {
-        public string fullName;
-        public string specialty;
-        public int[] grades;
-        
 
     }
 }

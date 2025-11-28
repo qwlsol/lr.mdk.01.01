@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace L2new
 {
-    internal class GradeCalculator
+    public class GradeCalculator
     {
         public double CalculateAverage(int[] grades)
         {
