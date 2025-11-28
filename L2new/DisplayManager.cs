@@ -14,6 +14,17 @@ namespace L2new
         {
             calculator = new GradeCalculator();
         }
+        public void ShowApplicants(List<Applicant> applicants, string specialty)
+        {
+            Console.WriteLine($"Абитуриенты специальности - {specialty}:");
+
+            for (int i = 0; i < applicants.Count; i++)
+            {
+                double avg = calculator.CalculateAverage(applicants[i].grades);
+                Console.WriteLine($"{i + 1}. {applicants[i].fullName} - средний балл: {avg:F2}");
+            }
+        }
+
     }
 }
 
