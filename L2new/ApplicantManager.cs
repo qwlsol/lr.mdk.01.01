@@ -16,5 +16,19 @@ namespace L2new
             applicants = new Dictionary<string, List<Applicant>>();
             calculator = new GradeCalculator();
         }
+        public void AddApplicant(string name, string specialty, int[] grades)
+        {
+            Applicant person = new Applicant();
+            person.fullName = name;
+            person.specialty = specialty;
+            person.grades = grades;
+
+            if (!applicants.ContainsKey(specialty))
+            {
+                applicants[specialty] = new List<Applicant>();
+            }
+
+            applicants[specialty].Add(person);
+        }
     }
 }
