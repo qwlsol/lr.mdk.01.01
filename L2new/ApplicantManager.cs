@@ -10,5 +10,11 @@ namespace L2new
     {
         private Dictionary<string, List<Applicant>> applicants;
         private GradeCalculator calculator;
+
+        public ApplicantManager()
+        {
+            applicants = new Dictionary<string, List<Applicant>>();
+            calculator = new GradeCalculator();
+        }
     }
 }
