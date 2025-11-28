@@ -24,6 +24,10 @@ namespace L2new
                 Console.WriteLine($"{i + 1}. {applicants[i].fullName} - средний балл: {avg:F2}");
             }
         }
+        public void ShowMessage(string message)
+        {
+            Console.WriteLine(message);
+        }
 
     }
 }

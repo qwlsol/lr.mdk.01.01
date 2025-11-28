@@ -8,9 +8,13 @@ namespace L2new
 {
     internal class Program
     {
-        ApplicantManager applicantManager = new ApplicantManager();
-        DisplayManager displayManager = new DisplayManager();
-        TestDataCreator dataCreator = new TestDataCreator();
+        static void Main()
+        {
+            ApplicantManager applicantManager = new ApplicantManager();
+            DisplayManager displayManager = new DisplayManager();
+            TestDataCreator dataCreator = new TestDataCreator();
 
+            dataCreator.CreateTestData(applicantManager);
+        }
     }
 }
