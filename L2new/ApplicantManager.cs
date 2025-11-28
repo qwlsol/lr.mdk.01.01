@@ -30,5 +30,28 @@ namespace L2new
 
             applicants[specialty].Add(person);
         }
-    }
+        public void SortApplicantsBySpecialty(string specialty)
+        {
+            if (applicants.ContainsKey(specialty))
+            {
+                List<Applicant> list = applicants[specialty];
+
+                for (int i = 0; i < list.Count - 1; i++)
+                {
+                    for (int j = i + 1; j < list.Count; j++)
+                    {
+                        double avg1 = calculator.CalculateAverage(list[i].grades);
+                        double avg2 = calculator.CalculateAverage(list[j].grades);
+
+                        if (avg1 < avg2)
+                        {
+                            Applicant temp = list[i];
+                            list[i] = list[j];
+                            list[j] = temp;
+                        }
+                    }
+                }
+            }
+        }
+    } 
 }
