@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace L2new
 {
-    internal class Program
+    internal class GradeCalculator
     {
-        
-        
     }
 }
