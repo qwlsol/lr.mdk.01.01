@@ -15,6 +15,26 @@ namespace L2new
             TestDataCreator dataCreator = new TestDataCreator();
 
             dataCreator.CreateTestData(applicantManager);
+
+            while (true)
+            {
+                displayManager.ShowMessage("Введите специальность:");
+                string input = Console.ReadLine();
+
+                applicantManager.SortApplicantsBySpecialty(input);
+
+                List<Applicant> applicants = applicantManager.GetApplicantsBySpecialty(input);
+
+                if (applicants.Count > 0)
+                {
+                    displayManager.ShowApplicants(applicants, input);
+                }
+                else
+                {
+                    displayManager.ShowMessage("Такой специальности не существует");
+                }
+
+            }
         }
     }
 }
