@@ -53,5 +53,14 @@ namespace L2new
                 }
             }
         }
-    } 
-}
+        public List<Applicant> GetApplicantsBySpecialty(string specialty)
+        {
+            if (applicants.ContainsKey(specialty))
+            {
+                return applicants[specialty];
+            }
+            return new List<Applicant>();
+        }
+    }
+} 
+
