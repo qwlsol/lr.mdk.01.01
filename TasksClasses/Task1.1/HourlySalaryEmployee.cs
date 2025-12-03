@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task1._1
 {
-    class HourlySalaryEmployee : Employee
+    public class HourlySalaryEmployee : Employee
     {
         private double hourRate_;
         private double hours_;
