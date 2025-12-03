@@ -37,10 +37,8 @@ namespace Task1._1
             return email_;
         }
 
-        public abstract double CalculateSalary()
-        {
-
-        }
+        public abstract double CalculateSalary();
+        
 
     }
 }
