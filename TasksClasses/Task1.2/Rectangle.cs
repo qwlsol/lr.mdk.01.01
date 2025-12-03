@@ -19,7 +19,7 @@ namespace Task1._2
 
         public void Accept(IVisitor visitor)
         {
-            visitor.Visit(this);
+            visitor.Visit();
         }
     }
 }
