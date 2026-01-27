@@ -1,0 +1,10 @@
+D:\П-30\Соловьёва\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+D:\П-30\Соловьёва\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+D:\П-30\Соловьёва\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+D:\П-30\Соловьёва\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.AssemblyReference.cache
+D:\П-30\Соловьёва\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.MainForm.resources
+D:\П-30\Соловьёва\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+D:\П-30\Соловьёва\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+D:\П-30\Соловьёва\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+D:\П-30\Соловьёва\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+D:\П-30\Соловьёва\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
