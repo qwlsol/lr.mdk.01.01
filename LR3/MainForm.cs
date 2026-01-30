@@ -10,9 +10,17 @@ using System.Windows.Forms;
 
 namespace LR3
 {
-    public partial class Form1 : Form
+    public enum MenuGroup
     {
-        public Form1()
+        Завтраки,
+        ОсновныеБлюда,
+        Салаты,
+        Напитки,
+        Десерты
+    }
+    public partial class MainForm : Form
+    {
+        public MainForm()
         {
             InitializeComponent();
         }
