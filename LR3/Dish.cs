@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR3
 {
-    internal class Dish
+    public class Dish
     {
         public string name;
         public string description;
