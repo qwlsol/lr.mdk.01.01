@@ -26,7 +26,16 @@ namespace LR3
 
             menuCategories.Add(category1, dishes1);
 
+            string category2 = "Напитки";
+            List<Dish> dishes2 = new List<Dish>();
 
+            Dish dish3 = new Dish("Fanta", "Охлажденный газированный напиток", 120, "Вода, ароматизатор апельсиновый, сахар");
+            dishes2.Add(dish3);
+
+            Dish dish4 = new Dish("Вода", "Вода с кусочками свежей мяты и льда", 100, "Вода, лёд, мята");
+            dishes2.Add(dish4);
+
+            menuCategories.Add(category2, dishes2);
 
         }
     }
