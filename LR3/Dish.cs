@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace LR3
 {
-    internal class Dish
+    public class Dish
     {
-        
+        private string name_;
+        private string description_;
+        private decimal price_;
+        private string ingredients_;
     }
 }
