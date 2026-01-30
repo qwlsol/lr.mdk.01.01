@@ -16,5 +16,9 @@ namespace LR3
             dish = baseDish;
             quantity = dishQuantity;
         }
+        public decimal CalculateTotal()
+        {
+            return dish.price * quantity;
+        }
     }
 }
