@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace LR3 
+namespace LR3
 {
     public partial class MainForm : Form
     {
@@ -10,6 +10,12 @@ namespace LR3
         public MainForm()
         {
             InitializeComponent();
+        }
+        private void CompletionMenu()
+        {
+            menuCategories = new Dictionary<string, List<Dish>>
+            
+
         }
     }
 }
