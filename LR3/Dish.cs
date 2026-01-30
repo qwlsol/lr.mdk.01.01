@@ -13,5 +13,13 @@ namespace LR3
         public decimal price;
         public List<string> ingredients;
         public string imagePath;
+        public Dish(string dishName, string dishDescription, decimal dishPrice)
+        {
+            name = dishName;
+            description = dishDescription;
+            price = dishPrice;
+            ingredients = new List<string>();
+            imagePath = "";
+        }
     }
 }
