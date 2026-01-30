@@ -8,5 +8,6 @@ namespace LR3
 {
     internal class Menu
     {
+        public Dictionary<Menu, List<Dish>> menuDictionary;
     }
 }
