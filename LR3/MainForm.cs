@@ -13,8 +13,20 @@ namespace LR3
         }
         private void CompletionMenu()
         {
-            menuCategories = new Dictionary<string, List<Dish>>
-            
+            menuCategories = new Dictionary<string, List<Dish>>();
+
+            string category1 = "Горячие блюда";
+            List<Dish> dishes1 = new List<Dish>();
+
+            Dish dish1 = new Dish("Стейк Рибай", "Нежный говяжий стейк с овощами", 1250, "Говядина, соль, перец, овощи");
+            dishes1.Add(dish1);
+
+            Dish dish2 = new Dish("Курица гриль", "Курица с травами и картофелем", 850, "Курица, травы, картофель");
+            dishes1.Add(dish2);
+
+            menuCategories.Add(category1, dishes1);
+
+
 
         }
     }
