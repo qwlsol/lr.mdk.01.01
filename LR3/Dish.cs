@@ -21,5 +21,10 @@ namespace LR3
             ingredients = new List<string>();
             imagePath = "";
         }
+        public void AddIngredient(string ingredient)
+        {
+            ingredients.Add(ingredient);
+        }
     }
 }
+
