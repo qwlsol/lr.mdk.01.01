@@ -9,5 +9,10 @@ namespace LR3
     internal class Menu
     {
         public Dictionary<Menu, List<Dish>> menuDictionary;
+        public Menu()
+        {
+            menuDictionary = new Dictionary<Menu, List<Dish>>();
+            CreateMenu();
+        }
     }
 }
