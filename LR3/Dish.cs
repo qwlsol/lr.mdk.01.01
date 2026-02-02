@@ -24,5 +24,17 @@ namespace LR3
         {
             get { return name_; }
         }
+        public string Price
+        {
+            get { return price_.ToString(); }
+        }
+        public string Discription
+        {
+            get { return description_; }
+        }
+        public string Ingredients
+        {
+            get { return ingredients_; }
+        }
     }
 }

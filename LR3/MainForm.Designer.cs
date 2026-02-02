@@ -30,6 +30,12 @@
         {
             this.groupsDishLlistBox = new System.Windows.Forms.ListBox();
             this.dishComboBox = new System.Windows.Forms.ComboBox();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.ingredientsLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // groupsDishLlistBox
@@ -48,17 +54,79 @@
             this.dishComboBox.Name = "dishComboBox";
             this.dishComboBox.Size = new System.Drawing.Size(121, 21);
             this.dishComboBox.TabIndex = 1;
+            this.dishComboBox.SelectedIndexChanged += new System.EventHandler(this.dishComboBox_SelectedIndexChanged);
+            // 
+            // priceLabel
+            // 
+            this.priceLabel.AutoSize = true;
+            this.priceLabel.Location = new System.Drawing.Point(293, 94);
+            this.priceLabel.Name = "priceLabel";
+            this.priceLabel.Size = new System.Drawing.Size(35, 13);
+            this.priceLabel.TabIndex = 2;
+            this.priceLabel.Text = "label1";
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.AutoSize = true;
+            this.descriptionLabel.Location = new System.Drawing.Point(293, 116);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(35, 13);
+            this.descriptionLabel.TabIndex = 2;
+            this.descriptionLabel.Text = "label1";
+            // 
+            // ingredientsLabel
+            // 
+            this.ingredientsLabel.AutoSize = true;
+            this.ingredientsLabel.Location = new System.Drawing.Point(293, 138);
+            this.ingredientsLabel.Name = "ingredientsLabel";
+            this.ingredientsLabel.Size = new System.Drawing.Size(35, 13);
+            this.ingredientsLabel.TabIndex = 2;
+            this.ingredientsLabel.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(204, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Цена:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(204, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Описание:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(204, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Ингредиенты:";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ingredientsLabel);
+            this.Controls.Add(this.descriptionLabel);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.dishComboBox);
             this.Controls.Add(this.groupsDishLlistBox);
             this.Name = "MainForm";
             this.Text = "Ресторан";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -66,6 +134,12 @@
 
         private System.Windows.Forms.ListBox groupsDishLlistBox;
         private System.Windows.Forms.ComboBox dishComboBox;
+        private System.Windows.Forms.Label priceLabel;
+        private System.Windows.Forms.Label descriptionLabel;
+        private System.Windows.Forms.Label ingredientsLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

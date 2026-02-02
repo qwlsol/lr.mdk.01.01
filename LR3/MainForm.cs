@@ -34,5 +34,16 @@ namespace LR3
             dishComboBox.DataSource = dishSelectGroups;
             dishComboBox.DisplayMember = "Name";
         }
+
+        private void dishComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Dish selectedDish = dishComboBox.SelectedItem as Dish;
+            if (selectedDish != null)
+            {
+                priceLabel.Text = selectedDish.Price;
+                descriptionLabel.Text = selectedDish.Discription;
+                ingredientsLabel.Text = selectedDish.Ingredients;
+            }
+        }
     }
 }
