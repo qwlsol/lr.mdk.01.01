@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupsDishLlistBox = new System.Windows.Forms.ListBox();
+            this.dishComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // groupsDishLlistBox
@@ -40,11 +41,20 @@
             this.groupsDishLlistBox.TabIndex = 0;
             this.groupsDishLlistBox.SelectedIndexChanged += new System.EventHandler(this.groupsDishLlistBox_SelectedIndexChanged);
             // 
+            // dishComboBox
+            // 
+            this.dishComboBox.FormattingEnabled = true;
+            this.dishComboBox.Location = new System.Drawing.Point(207, 57);
+            this.dishComboBox.Name = "dishComboBox";
+            this.dishComboBox.Size = new System.Drawing.Size(121, 21);
+            this.dishComboBox.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dishComboBox);
             this.Controls.Add(this.groupsDishLlistBox);
             this.Name = "MainForm";
             this.Text = "Ресторан";
@@ -55,6 +65,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox groupsDishLlistBox;
+        private System.Windows.Forms.ComboBox dishComboBox;
     }
 }
 
