@@ -18,9 +18,10 @@ namespace LR3
             InitializeComponent();
 
             dish_.Add("Завтраки", new List<Dish>(){new Dish("Омлет с ветчиной", 550, "Пышный омлет с ветчиной и зеленью",
-                "Яйца, Ветчина, Молоко, Зелень") });
+                "Яйца, Ветчина, Молоко, Зелень", "E:\\мдк01.01\\LR3\\омлет.png") });
 
-            dish_.Add("Основные Блюда", new List<Dish>(){new Dish("Паста Карбонара", 450, "Паста со сливочным соусом и беконом", "Паста, Бекон, Сливки, Сыр") });
+            dish_.Add("Основные Блюда", new List<Dish>(){new Dish("Паста Карбонара", 450, "Паста со сливочным соусом и беконом",
+                "Паста, Бекон, Сливки, Сыр", "E:\\мдк01.01\\LR3\\карбонара.jfif") });
 
             List<string> allGroups = dish_.Keys.ToList();
             groupsDishLlistBox.DataSource = allGroups;
@@ -43,6 +44,7 @@ namespace LR3
                 priceLabel.Text = selectedDish.Price;
                 descriptionLabel.Text = selectedDish.Discription;
                 ingredientsLabel.Text = selectedDish.Ingredients;
+                dishPictureBox.Load(selectedDish.ImagePath);
             }
         }
     }

@@ -36,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dishPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dishPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // groupsDishLlistBox
@@ -110,11 +112,21 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Ингредиенты:";
             // 
+            // dishPictureBox
+            // 
+            this.dishPictureBox.Location = new System.Drawing.Point(46, 220);
+            this.dishPictureBox.Name = "dishPictureBox";
+            this.dishPictureBox.Size = new System.Drawing.Size(282, 219);
+            this.dishPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dishPictureBox.TabIndex = 3;
+            this.dishPictureBox.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(668, 484);
+            this.Controls.Add(this.dishPictureBox);
             this.Controls.Add(this.ingredientsLabel);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.label3);
@@ -125,6 +137,7 @@
             this.Controls.Add(this.groupsDishLlistBox);
             this.Name = "MainForm";
             this.Text = "Ресторан";
+            ((System.ComponentModel.ISupportInitialize)(this.dishPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,6 +153,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox dishPictureBox;
     }
 }
 
