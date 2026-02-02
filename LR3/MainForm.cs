@@ -12,6 +12,7 @@ namespace LR3
 {
     public partial class MainForm : Form
     {
+        private Dictionary<string, List<Dish>> dish_ = new Dictionary<string, List<Dish>>();
         public MainForm()
         {
             InitializeComponent();
