@@ -30,6 +30,9 @@ namespace LR3
         {
             string selectedGroups = groupsDishLlistBox.SelectedItem.ToString();
             List<Dish> dishSelectGroups = dish_[selectedGroups];
+
+            dishComboBox.DataSource = dishSelectGroups;
+            dishComboBox.DisplayMember = "Name";
         }
     }
 }
