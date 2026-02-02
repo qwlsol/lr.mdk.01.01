@@ -28,13 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.groupsDishLlistBox = new System.Windows.Forms.ListBox();
+            this.SuspendLayout();
+            // 
+            // groupsDishLlistBox
+            // 
+            this.groupsDishLlistBox.FormattingEnabled = true;
+            this.groupsDishLlistBox.Location = new System.Drawing.Point(46, 34);
+            this.groupsDishLlistBox.Name = "groupsDishLlistBox";
+            this.groupsDishLlistBox.Size = new System.Drawing.Size(120, 95);
+            this.groupsDishLlistBox.TabIndex = 0;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.groupsDishLlistBox);
+            this.Name = "MainForm";
+            this.Text = "Ресторан";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox groupsDishLlistBox;
     }
 }
 
