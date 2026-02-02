@@ -22,6 +22,9 @@ namespace LR3
 
             dish_.Add("Основные Блюда", new List<Dish>(){new Dish("Паста Карбонара", 450, "Паста со сливочным соусом и беконом", "Паста, Бекон, Сливки, Сыр") });
 
+            List<string> allGroups = dish_.Keys.ToList();
+            groupsDishLlistBox.DataSource = allGroups;
         }
+        
     }
 }
