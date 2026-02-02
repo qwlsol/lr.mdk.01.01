@@ -38,6 +38,7 @@
             this.groupsDishLlistBox.Name = "groupsDishLlistBox";
             this.groupsDishLlistBox.Size = new System.Drawing.Size(120, 95);
             this.groupsDishLlistBox.TabIndex = 0;
+            this.groupsDishLlistBox.SelectedIndexChanged += new System.EventHandler(this.groupsDishLlistBox_SelectedIndexChanged);
             // 
             // MainForm
             // 

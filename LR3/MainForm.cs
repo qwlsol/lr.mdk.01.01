@@ -25,6 +25,11 @@ namespace LR3
             List<string> allGroups = dish_.Keys.ToList();
             groupsDishLlistBox.DataSource = allGroups;
         }
-        
+
+        private void groupsDishLlistBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedGroups = groupsDishLlistBox.SelectedItem.ToString();
+            List<Dish> dishSelectGroups = dish_[selectedGroups];
+        }
     }
 }
