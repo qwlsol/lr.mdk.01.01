@@ -20,5 +20,9 @@ namespace LR3
             description_ = description;
             ingredients_ = ingredients;
         }
+        public string Name
+        {
+            get { return name_; }
+        }
     }
 }
