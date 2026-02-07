@@ -52,7 +52,7 @@
             // dishComboBox
             // 
             this.dishComboBox.FormattingEnabled = true;
-            this.dishComboBox.Location = new System.Drawing.Point(207, 57);
+            this.dishComboBox.Location = new System.Drawing.Point(207, 34);
             this.dishComboBox.Name = "dishComboBox";
             this.dishComboBox.Size = new System.Drawing.Size(121, 21);
             this.dishComboBox.TabIndex = 1;
@@ -61,7 +61,7 @@
             // priceLabel
             // 
             this.priceLabel.AutoSize = true;
-            this.priceLabel.Location = new System.Drawing.Point(293, 94);
+            this.priceLabel.Location = new System.Drawing.Point(293, 71);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(35, 13);
             this.priceLabel.TabIndex = 2;
@@ -70,7 +70,7 @@
             // descriptionLabel
             // 
             this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.Location = new System.Drawing.Point(293, 116);
+            this.descriptionLabel.Location = new System.Drawing.Point(293, 93);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.Size = new System.Drawing.Size(35, 13);
             this.descriptionLabel.TabIndex = 2;
@@ -79,7 +79,7 @@
             // ingredientsLabel
             // 
             this.ingredientsLabel.AutoSize = true;
-            this.ingredientsLabel.Location = new System.Drawing.Point(293, 138);
+            this.ingredientsLabel.Location = new System.Drawing.Point(293, 115);
             this.ingredientsLabel.Name = "ingredientsLabel";
             this.ingredientsLabel.Size = new System.Drawing.Size(35, 13);
             this.ingredientsLabel.TabIndex = 2;
@@ -88,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(204, 94);
+            this.label1.Location = new System.Drawing.Point(204, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 2;
@@ -97,7 +97,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(204, 116);
+            this.label2.Location = new System.Drawing.Point(204, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 2;
@@ -106,7 +106,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(204, 138);
+            this.label3.Location = new System.Drawing.Point(204, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 2;
@@ -114,7 +114,7 @@
             // 
             // dishPictureBox
             // 
-            this.dishPictureBox.Location = new System.Drawing.Point(46, 220);
+            this.dishPictureBox.Location = new System.Drawing.Point(46, 159);
             this.dishPictureBox.Name = "dishPictureBox";
             this.dishPictureBox.Size = new System.Drawing.Size(282, 219);
             this.dishPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 484);
+            this.ClientSize = new System.Drawing.Size(536, 442);
             this.Controls.Add(this.dishPictureBox);
             this.Controls.Add(this.ingredientsLabel);
             this.Controls.Add(this.descriptionLabel);
