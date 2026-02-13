@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ModelViewLib;
+using ModelViewLib.Views;
+
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public class UsersTableView : DataGridView, IUsersView
     {
-        public Form1()
+        public void DisplayUsers(List<User> users)
         {
-            InitializeComponent();
+           DataSource = users;
         }
     }
 }
