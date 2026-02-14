@@ -21,5 +21,10 @@ namespace ModelViewLib.Presenters
             List<User> d = model_.UserUpload();
             view_.DisplayUsers(d);
         }
+
+        public void Remove(List<User> selectedUsers)
+        {
+            
+        }
     }
 }
