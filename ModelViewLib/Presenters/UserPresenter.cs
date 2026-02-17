@@ -18,13 +18,14 @@ namespace ModelViewLib.Presenters
             model_ = model;
             view_ = view;
 
-            List<User> d = model_.UserUpload();
-            view_.DisplayUsers(d);
+            view_.DisplayUsers(model_.UserUpload());
         }
 
-        public void Remove(List<User> selectedUsers)
+        public void RemoveUser(List<User> users)
         {
-            
+            model_.RemoveUsers(users);
+            view_.DisplayUsers(model_.UserUpload());
+
         }
     }
 }

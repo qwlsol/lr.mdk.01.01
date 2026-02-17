@@ -7,5 +7,6 @@ namespace ModelViewLib.Models
         List<User> UserUpload();
 
         bool UserRegistration(User user);
+        void RemoveUsers(List<User> users);
     }
 }

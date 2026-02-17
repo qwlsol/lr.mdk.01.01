@@ -14,24 +14,23 @@ using System.Windows.Forms;
 namespace WindowsFormsApp1
 {
     public partial class MainForm : Form
-    {IUsersModel model_ = new MemoryUsersModel();
-        UserPresenter presenter_;
+    {
+        private UserPresenter presenter_;
         public MainForm()
         {
             InitializeComponent();
 
-            UsersTableView tableView = new UsersTableView();
-            Controls.Add(tableView);
-
-            tableView.Dock = DockStyle.Fill;
-
-            UserPresenter user = new UserPresenter(new MemoryUsersModel(), tableView);
+            presenter_ = new UserPresenter(new MemoryUsersModel(), UsersView);
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            List<User> selectedUsers = UsersView.GetSelectedUsers();
-            presenter_.Remove(selectedUsers);
+            if (MessageBox.Show("Вы точно хотите удалить пользователя?", "Внимание!!", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                List<User> selectedUsers = UsersView.GetSelectedUsers();
+                presenter_.RemoveUser(selectedUsers);
+            }
         }
     }
 }

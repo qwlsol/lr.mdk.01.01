@@ -17,6 +17,19 @@ namespace ModelViewLib.Models
             users_.Add(new User("Elephant", "ccc124", "Слон"));
 
         }
+
+        public void RemoveUsers(List<User> users)
+        {
+            foreach(User u in users)
+            {
+                int targetIndex = users_.FindIndex(local=>local.Login == u.Login);
+                if (targetIndex >= 0)
+                {
+                    users_.RemoveAt(targetIndex);
+                }
+            }
+        }
+
         public bool UserRegistration(User user)
         {
             int count = users_.Count;
