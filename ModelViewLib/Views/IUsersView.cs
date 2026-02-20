@@ -8,5 +8,7 @@ namespace ModelViewLib.Views
         void DisplayUsers(List<User> users);
        
         List<User> GetSelectedUsers();
+
+        bool Add(User user);
     }
 }

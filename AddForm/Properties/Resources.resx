@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,7 +60,6 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -69,10 +68,9 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -87,10 +85,9 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -112,51 +109,9 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RemoveButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGtSURBVFhH3ZZdToNAFIWJL5a+6ZtuwHW0hAXUugHb9fkT
-        W6GNtok/KypYo4S5csrMMMDU2gw4xi+5acNczjlcWhiHLPM3A6xWKwqCgCaTCU2nU6OCBrSiKOLqZWoB
-        er0eOY7TSvX7fe5SUArQprkoz/O4W44MgBGJpm63K0enG+s+JW6l67pSP45j7qoECMNQNuCEpoGm0IeX
-        QAZQG5C6aaAp9NULlAEwLtGA702zTf9nAdZrSgYjSh+e+IHtoCc5HxG9vfMjOUYBksElfTjHWR0Suynu
-        XxWsoQe9yTALoWAUgGVXBeHPo7Ps09WGyM1d3pMFfXzmKzlGAQC7mysGLqVXRc93awLjAKBmNFsSW7zu
-        NAeNBADsVhn1wcmmpPn1Pe+q01gAwBYvmfHpxlgESedLvqrn/wSwegus/git/g2tP4jwHtj7UXwx5kdz
-        jALgxZIMx5RWrkoHetCLF5iKWYAG2BnA+obE+pZM3ZRiA4kTkBrjMiloQKvT6Uh97aYUYMssmtoq3/e5
-        W04pAGgzRNUc1AIAjAj3CaPTjXWfgga01LGraAP8JpYDEH0BM16QizcsOUsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="AddButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARPSURBVFhHfZfJSkQxEEXbGVyJCPoJiiCI8zyAX+hG3LgQ
-        9R8UB5znpcNCEVwpOKOgtkZO0TdWx9deKJJUqupWKum8dO77+zsg4Ovr60+ruc/Pz6IxoJ/qBHSprZDP
-        561Fl6NDEJEKHx8fhV4ILy8v4fz8POzt7YWNjY2wvb0ddnZ2wtbWlsnu7q7N0e7v75vt4+NjwbuYXP33
-        93drLQHABKJEJicnQy6XKynl5eWhrKwstlk2koWFBYspDoFK5NKVA5wqKiqi1NXVhfb29jA0NBTGx8dN
-        xsbGwsjISBgdHQ3Dw8Mm6Gjb2tpCQ0ODxSE5JZi1XbECgrKG+OzszHTsP1CF0iBAq5MIl5eXlkBlZaXF
-        BaxcNkUJKOP+/v54UEBWlcB/yQj0iUUFFV9gzhKgMzU1FVcvck+soLQSD3x80iC14bwgMzMz8ZDHCmif
-        KJlAAAXVNggKnlWdlFi+Nzc3kUeIPa0epAF8qWnTecFXoFQfDqoAiGOM/M6ZqK+vtwkBA79CfzcQ9PX1
-        NTw/P9tYdt5exD7hxsZGq8Lt7a2NLYGLiwtLoLW1tchYfb8CT8TJRjQWvL1i0CKdnZ3GdXx8bHpL4ODg
-        wJS9vb2ZCfjgAiQqpyrj7eiLFKjPHYLf8vKyjS2B9fV1U/b19UWHFJBoZSLCB/HAJiuGdFxcbMHi4uJv
-        Amtraxaoq6srGvogvqQCuqqqKruwAPZZlRIUb2BgwKq2srJiY/saKoHu7u4/CXhy36ciqoAnV+lTSDc4
-        OGgVyEzgvy0QGUIAhJVIp6tW7cPDg/kpnhLke8H80tKSje1jxCcWJVsAfBLqixS7tE/LVvj26enJ/DyI
-        pQQ4+MDOwOrqqimpAEj3HEd0fo/ZApF5pFvg+4CvJUnzbgBWAR4VKDkDHp5QUHK0bIFuNSAyWvmmCXAG
-        8OFBAyx9XjMkwBcrJVUAVuz7gNWrAswherpJJ6jPGwIfFg3Mm0HWFsgp/RABbPDh0CkhT1hqIdwD+LFo
-        YFtwcnJiypaWFlNijKRBIPVklJLKeWLgE07nOjo6jOv09NTmrAJvb2+mrK6u/kPKWDpVRjrk/v6+iEQ2
-        gL7m1DY1NRnX3d2djeMRRokIOKTOQMlkwa9cdvJVwnBQNcEYMdKlcnV1ZROCD+TJfVJpgqqCWs2zar9Q
-        9PGPydzcXLzFNClCT+xPOVBwyHz5BenwITZ3x/T0tPkh8VmOIQaUh8tC8POCdEpSSXh4HTYTExNx9fID
-        v5tegIwQTipICRj7hPx8ant9fW2VLXVrmoZgvrQY6kwgVIXXEvcEjxYuE142PT09JnxiueGYw6a5uTnU
-        1NREf08Ol08+l14yrACZnZ0NtbW1MQhCIuorQVrdB6kdLaufn58vRP8Fi4XbDqGS8OXTn0eAMdtxdHRk
-        b7nNzc1weHhotxlfNe51+ugQnvbyZ7ValCByYAmk0KRKpa3xgbzOtyDVKU5qk8/nww9XxTrC6QXHAgAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
 </root>

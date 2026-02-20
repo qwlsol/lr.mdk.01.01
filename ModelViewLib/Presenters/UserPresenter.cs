@@ -10,9 +10,9 @@ namespace ModelViewLib.Presenters
 {
     public class UserPresenter
     {
-      private IUsersModel model_;
-      private IUsersView view_;
-           
+        private IUsersModel model_;
+        private IUsersView view_;
+
         public UserPresenter(IUsersModel model, IUsersView view)
         {
             model_ = model;
@@ -26,6 +26,17 @@ namespace ModelViewLib.Presenters
             model_.RemoveUsers(users);
             view_.DisplayUsers(model_.UserUpload());
 
+        }
+        public void AddUser()
+        {
+            User newUser = null;
+            if (view_.Add(newUser))
+            {
+                if (model_.UserRegistration(newUser))
+                {
+                    view_.DisplayUsers(model_.UserUpload());
+                }
+            }
         }
     }
 }

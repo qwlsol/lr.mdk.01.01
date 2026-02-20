@@ -32,5 +32,10 @@ namespace WindowsFormsApp1
                 presenter_.RemoveUser(selectedUsers);
             }
         }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            presenter_.AddUser();
+        }
     }
 }
