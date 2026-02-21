@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             AddUserForm form = new AddUserForm();
             if (form.ShowDialog() == DialogResult.OK)
             {
-               
+               user = new User(form.UserLogin, form.UserPassword, form.UserName);
                     return true;
             }
             return false;
@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
 
         public void DisplayUsers(List<User> users)
         {
-            DataSource = null;
+           DataSource = null;
            DataSource = users;
         }
 
@@ -39,5 +39,6 @@ namespace WindowsFormsApp1
             }
             return result;
         }
+       
     }
 }

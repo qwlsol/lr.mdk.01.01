@@ -32,16 +32,14 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.RemoveButton = new System.Windows.Forms.ToolStripButton();
             this.AddButton = new System.Windows.Forms.ToolStripButton();
-            this.UsersView = new WindowsFormsApp1.UserTableView();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UsersView)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RemoveButton,
-            this.AddButton});
+            this.AddButton,
+            this.RemoveButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 47);
@@ -72,26 +70,16 @@
             this.AddButton.Text = "toolAddButton";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // UsersView
-            // 
-            this.UsersView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UsersView.Location = new System.Drawing.Point(0, 50);
-            this.UsersView.Name = "UsersView";
-            this.UsersView.Size = new System.Drawing.Size(800, 150);
-            this.UsersView.TabIndex = 1;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.UsersView);
             this.Controls.Add(this.toolStrip1);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UsersView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

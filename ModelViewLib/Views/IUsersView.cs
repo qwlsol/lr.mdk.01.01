@@ -10,5 +10,6 @@ namespace ModelViewLib.Views
         List<User> GetSelectedUsers();
 
         bool Add(User user);
+
     }
 }
