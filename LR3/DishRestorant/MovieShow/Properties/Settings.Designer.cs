@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LR3.Properties
+namespace MovieShow.Properties
 {
 
 

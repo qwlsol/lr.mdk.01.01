@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
-namespace LR3
+namespace MovieShow
 {
-    interface IDataLoader
+    internal interface IDish
     {
-        Dictionary<string, List<Dish>> LoadData();
+        List<Dish> LoadAllDish();
     }
 }
