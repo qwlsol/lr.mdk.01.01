@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieShow
 {
-    class Dish
+    public class Dish
     {
         private string name_;
         private int price_;

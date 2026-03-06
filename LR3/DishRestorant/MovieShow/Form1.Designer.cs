@@ -45,7 +45,7 @@
             this.ListBoxGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ListBoxGroup.FormattingEnabled = true;
             this.ListBoxGroup.ItemHeight = 16;
-            this.ListBoxGroup.Location = new System.Drawing.Point(-2, 11);
+            this.ListBoxGroup.Location = new System.Drawing.Point(-2, -4);
             this.ListBoxGroup.Name = "ListBoxGroup";
             this.ListBoxGroup.Size = new System.Drawing.Size(126, 436);
             this.ListBoxGroup.TabIndex = 0;
@@ -54,15 +54,15 @@
             // ComboBoxDish
             // 
             this.ComboBoxDish.FormattingEnabled = true;
-            this.ComboBoxDish.Location = new System.Drawing.Point(340, 67);
+            this.ComboBoxDish.Location = new System.Drawing.Point(284, 13);
             this.ComboBoxDish.Name = "ComboBoxDish";
-            this.ComboBoxDish.Size = new System.Drawing.Size(113, 21);
+            this.ComboBoxDish.Size = new System.Drawing.Size(149, 21);
             this.ComboBoxDish.TabIndex = 1;
             this.ComboBoxDish.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDish_SelectedIndexChanged);
             // 
             // PictureBoxDish
             // 
-            this.PictureBoxDish.Location = new System.Drawing.Point(458, 0);
+            this.PictureBoxDish.Location = new System.Drawing.Point(439, 151);
             this.PictureBoxDish.Name = "PictureBoxDish";
             this.PictureBoxDish.Size = new System.Drawing.Size(457, 327);
             this.PictureBoxDish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -72,9 +72,9 @@
             // ButtonOrderDish
             // 
             this.ButtonOrderDish.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ButtonOrderDish.Location = new System.Drawing.Point(184, 202);
+            this.ButtonOrderDish.Location = new System.Drawing.Point(298, 164);
             this.ButtonOrderDish.Name = "ButtonOrderDish";
-            this.ButtonOrderDish.Size = new System.Drawing.Size(153, 64);
+            this.ButtonOrderDish.Size = new System.Drawing.Size(126, 30);
             this.ButtonOrderDish.TabIndex = 3;
             this.ButtonOrderDish.Text = "Отчёт";
             this.ButtonOrderDish.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             // RichTextBoxInfo
             // 
             this.RichTextBoxInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RichTextBoxInfo.Location = new System.Drawing.Point(458, 355);
+            this.RichTextBoxInfo.Location = new System.Drawing.Point(439, 11);
             this.RichTextBoxInfo.Name = "RichTextBoxInfo";
             this.RichTextBoxInfo.Size = new System.Drawing.Size(458, 125);
             this.RichTextBoxInfo.TabIndex = 4;
@@ -91,17 +91,27 @@
             // 
             // totalOrdersDish
             // 
-            this.totalOrdersDish.Location = new System.Drawing.Point(340, 132);
+            this.totalOrdersDish.Location = new System.Drawing.Point(348, 69);
             this.totalOrdersDish.Margin = new System.Windows.Forms.Padding(2);
+            this.totalOrdersDish.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.totalOrdersDish.Name = "totalOrdersDish";
-            this.totalOrdersDish.Size = new System.Drawing.Size(112, 20);
+            this.totalOrdersDish.Size = new System.Drawing.Size(86, 20);
             this.totalOrdersDish.TabIndex = 5;
+            this.totalOrdersDish.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(181, 67);
+            this.label1.Location = new System.Drawing.Point(129, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 20);
@@ -112,12 +122,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(169, 132);
+            this.label2.Location = new System.Drawing.Point(129, 69);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 20);
+            this.label2.Size = new System.Drawing.Size(206, 20);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Выбериете кол-во ";
+            this.label2.Text = "Выбериете кол-во порций";
             // 
             // MainForm
             // 

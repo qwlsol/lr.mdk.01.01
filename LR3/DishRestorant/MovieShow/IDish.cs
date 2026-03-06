@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieShow
 {
-    internal interface IDish
+    public interface IDish
     {
         List<Dish> LoadAllDish();
     }

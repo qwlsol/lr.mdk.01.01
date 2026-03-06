@@ -15,22 +15,48 @@ namespace MovieShow
         List<Dish> allDishes = new List<Dish>();
         int totalOrdersAppetizer = 0;
         int totalOrdersMainCourse = 0;
+
         public MainForm()
         {
             InitializeComponent();
-            ListBoxGroup.Items.Add("Закуски");
-            ListBoxGroup.Items.Add("Горячее");
 
-            totalOrdersDish.Minimum = 1;
+            // Проверяем, что компоненты существуют
+            if (ListBoxGroup != null)
+            {
+                ListBoxGroup.Items.Add("Закуски");
+                ListBoxGroup.Items.Add("Горячее");
+            }
 
-            IDish dishLoader = new StorageDish();
-            allDishes = dishLoader.LoadAllDish();
+            if (totalOrdersDish != null)
+            {
+                totalOrdersDish.Minimum = 1;
+                totalOrdersDish.Value = 1;
+            }
+
+            // Загружаем данные
+            try
+            {
+                IDish dishLoader = new StorageDish();
+                allDishes = dishLoader.LoadAllDish();
+
+                if (allDishes.Count == 0)
+                {
+                    MessageBox.Show("Не удалось загрузить блюда. Проверьте файл data2.csv",
+                        "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при создании загрузчика: {ex.Message}",
+                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ListBoxGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBoxDish.Items.Clear();
+            if (ListBoxGroup.SelectedItem == null) return;
 
+            ComboBoxDish.Items.Clear();
             string selectedGroup = ListBoxGroup.SelectedItem.ToString();
 
             foreach (Dish dish in allDishes)
@@ -69,21 +95,59 @@ namespace MovieShow
                 {
                     int orders = (int)totalOrdersDish.Value;
 
+                    // Обновляем статистику (если нужно)
+                    if (selectedGroup == "Закуски")
+                    {
+                        totalOrdersAppetizer += orders;
+                    }
+                    else if (selectedGroup == "Горячее")
+                    {
+                        totalOrdersMainCourse += orders;
+                    }
+
                     RichTextBoxInfo.Text = selectedDish.GetInfo();
                     RichTextBoxInfo.Text += $"\nЗаказано порций: {orders}";
                 }
+            }
+            else
+            {
+                MessageBox.Show("Выберите группу и блюдо!", "Внимание",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void ComboBoxDish_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ComboBoxDish.SelectedItem == null) return;
+
             string dishName = ComboBoxDish.SelectedItem.ToString();
 
             foreach (Dish dish in allDishes)
             {
                 if (dish.Name == dishName)
                 {
-                    PictureBoxDish.Load(dish.Photo);
+                    try
+                    {
+                        // Проверяем, существует ли файл изображения
+                        if (System.IO.File.Exists(dish.Photo))
+                        {
+                            PictureBoxDish.Load(dish.Photo);
+                        }
+                        else
+                        {
+                            // Если файл не найден, очищаем PictureBox
+                            PictureBoxDish.Image = null;
+                            MessageBox.Show($"Файл изображения не найден: {dish.Photo}",
+                                "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        PictureBoxDish.Image = null;
+                        MessageBox.Show($"Ошибка загрузки изображения: {ex.Message}",
+                            "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    break;
                 }
             }
         }
