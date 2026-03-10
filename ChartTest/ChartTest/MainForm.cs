@@ -1,93 +1,103 @@
 ﻿using LiveCharts;
 using LiveCharts.Wpf;
+using SalesLibrary;
+using SalesLibrary.Analysis;
+using SalesLibrary.Presenters;
+using SalesLibrary.Views;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Windows.Media;
+using SeriesCollection = LiveCharts.SeriesCollection;
 
 namespace ChartTest
 {
     public partial class MainForm : Form
     {
-
+        private SalesPresenter presenter_;
         void FillCartesianChart()
         {
-            LineSeries series = new LineSeries
+            ItemsList.DataSource = presenter_.GetAllItems();
+            ItemsList.DisplayMember = "Name";
+            if (ItemsList.Items.Count > 0)
             {
-                Title = "График",
-                Values = new ChartValues<int> { 2, 6, 4, 10, 7, 16, 2 },
-
-                Stroke = new SolidColorBrush(Colors.Red),
-                StrokeThickness = 3,
-
-                PointGeometry = DefaultGeometries.Diamond,
-                PointGeometrySize = 8,
-
-                Fill = new LinearGradientBrush(
-                    System.Windows.Media.Color.FromArgb(90, 33, 150, 243),
-                    System.Windows.Media.Color.FromArgb(0, 33, 150, 243),
-                    90)
-            };
-
-            cartesian.Series = new SeriesCollection { series, /*series_2, series_3*/ };
-
-            /// Ось Y
-            cartesian.AxisY.Add(new Axis
-            {
-                Foreground = System.Windows.Media.Brushes.Black,
-                LabelFormatter = value => value.ToString("N0"),
-
-                Separator = new Separator
-                {
-                    Stroke = new SolidColorBrush(Color.FromArgb(40, 0, 0, 0)),
-                    StrokeThickness = 1
-                },
-
-                MaxValue = 30,
-                MinValue = 1
-            }              
-            );
-
-
-            /// Ось X
-            cartesian.AxisX.Add(new Axis
-            {
-                Foreground = System.Windows.Media.Brushes.Black,
-                Labels = new[] { "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен" },
-
-                Separator = new Separator
-                {
-                    IsEnabled = false,
-                },
+                presenter_.ShowSalesByItem(((Item)ItemsList.Items[0]).Name);
             }
-            );
         }
 
         void FillAngular()
         {
-            angular.Value = 65;
             angular.FromValue = 0;
             angular.ToValue = 100;
 
-            angular.TicksForeground = Brushes.Black;
-            angular.NeedleFill = Brushes.Blue;
+            angular.TicksForeground = Brushes.Gray;
+            angular.NeedleFill = Brushes.DarkBlue;
         }
 
         void FillSolid()
         {
-            solid.Value = 40;
             solid.From = 0;
             solid.To = 100;
             solid.LabelFormatter = value => value + "%";
-           
         }
+        void FillPieChart()
+        {
+            Func<ChartPoint, string> labelPoint = chartPoint => string.Format("{0} ({1:P})",
+                                                    chartPoint.Y, chartPoint.Participation);
+            
+
+    SeriesCollection piechartData = new SeriesCollection
+    {
+        new PieSeries
+        {
+            Title = "Конфетки Заоблачные",
+            Values = new ChartValues<double> {40},
+            DataLabels = true,
+            LabelPoint = labelPoint,
+            Fill = System.Windows.Media.Brushes.Green
+        },
+        new PieSeries
+        {
+            Title = "Зефирка Воздушная",
+            Values = new ChartValues<double> {60},
+            DataLabels = true,
+            LabelPoint = labelPoint,
+            Fill = System.Windows.Media.Brushes.Blue
+        }
+    };
+            pieChart1.Series = piechartData;
+            pieChart1.LegendLocation = LegendLocation.Right;
+        }
+
+
         public MainForm()
         {
             InitializeComponent();
+
+            presenter_ = new SalesPresenter(new List<ISalesView> { cartesian });
 
             FillCartesianChart();
 
             FillAngular();
 
             FillSolid();
+            FillPieChart();
+        }
+
+        private void ItemsList_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            Item selectedItem = ((Item)(ItemsList.SelectedItem));
+            if(selectedItem == null)
+            {
+                return;
+            }
+
+            presenter_.ShowSalesByItem(selectedItem.Name);
+            double percent = Math.Round(
+                presenter_.GetProfitPercentByItem(selectedItem), 2);
+
+            angular.Value = percent;
+            solid.Value = percent;
         }
     }
 }
