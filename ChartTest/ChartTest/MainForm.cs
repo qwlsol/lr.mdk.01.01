@@ -1,4 +1,5 @@
 ﻿using LiveCharts;
+using LiveCharts.WinForms;
 using LiveCharts.Wpf;
 using SalesLibrary;
 using SalesLibrary.Analysis;
@@ -40,48 +41,20 @@ namespace ChartTest
             solid.To = 100;
             solid.LabelFormatter = value => value + "%";
         }
-        void FillPieChart()
-        {
-            Func<ChartPoint, string> labelPoint = chartPoint => string.Format("{0} ({1:P})",
-                                                    chartPoint.Y, chartPoint.Participation);
-            
-
-    SeriesCollection piechartData = new SeriesCollection
-    {
-        new PieSeries
-        {
-            Title = "Конфетки Заоблачные",
-            Values = new ChartValues<double> {40},
-            DataLabels = true,
-            LabelPoint = labelPoint,
-            Fill = System.Windows.Media.Brushes.Green
-        },
-        new PieSeries
-        {
-            Title = "Зефирка Воздушная",
-            Values = new ChartValues<double> {60},
-            DataLabels = true,
-            LabelPoint = labelPoint,
-            Fill = System.Windows.Media.Brushes.Blue
-        }
-    };
-            pieChart1.Series = piechartData;
-            pieChart1.LegendLocation = LegendLocation.Right;
-        }
-
-
+        
         public MainForm()
         {
             InitializeComponent();
 
             presenter_ = new SalesPresenter(new List<ISalesView> { cartesian });
-
+            pieChart.SetPresenter(presenter_);
+            pieChart.UpdateView();
             FillCartesianChart();
 
             FillAngular();
 
             FillSolid();
-            FillPieChart();
+            
         }
 
         private void ItemsList_SelectedIndexChanged(object sender, System.EventArgs e)
