@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LR_сharts", "LR_сharts.csproj", "{36872BBF-320E-43C0-9598-6B1F725B9B44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinksInCafeLibrary", "..\DrinksInCafeLibrary\DrinksInCafeLibrary.csproj", "{1AFE2396-FF9B-4885-93F8-699F7754EEC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36872BBF-320E-43C0-9598-6B1F725B9B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36872BBF-320E-43C0-9598-6B1F725B9B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36872BBF-320E-43C0-9598-6B1F725B9B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36872BBF-320E-43C0-9598-6B1F725B9B44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AFE2396-FF9B-4885-93F8-699F7754EEC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFE2396-FF9B-4885-93F8-699F7754EEC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFE2396-FF9B-4885-93F8-699F7754EEC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFE2396-FF9B-4885-93F8-699F7754EEC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6670277-0A49-45A4-A9F4-24286B8F866F}
+	EndGlobalSection
+EndGlobal
