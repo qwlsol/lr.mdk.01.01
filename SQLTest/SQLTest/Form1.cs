@@ -14,10 +14,12 @@ namespace SQLTest
 {
     public partial class Form1: Form
     {
+        PgUsersLoader pgUsersLoader = new PgUsersLoader();
         public Form1()
         {
             InitializeComponent();
-           
+            List<User> users = pgUsersLoader.Load();
+            userDataGridView.DataSource = users;
             /*var cs = "Host=192.168.1.48;Username=st50-12;Password=5012;Database=P-30_Student";
                  
             var con = new NpgsqlConnection(cs);
@@ -37,6 +39,15 @@ namespace SQLTest
 
             }
             MessageBox.Show($"Логин : Пароль: { string.Join(", ", login)}");*/
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in userDataGridView.Rows)
+            {
+                User user = row.DataBoundItem as User;
+                pgUsersLoader.DeleteUser(user.Login);
+            }
         }
     }
 }
