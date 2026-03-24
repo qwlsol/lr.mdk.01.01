@@ -19,7 +19,7 @@ namespace SQLTest
             List<User> allusers = new List<User>();
             try
             {
-                var cs = "Host=192.168.1.48;Username=st50-14;Password=5014;Database=P-30_Student";
+                var cs = "Host=192.168.1.48;Username=st56-7;Password=567;Database=p-30_user";
 
                 var con = new NpgsqlConnection(cs);
                 con.Open();
@@ -50,7 +50,7 @@ namespace SQLTest
         {
             try
             {
-                var cs = "Host=192.168.1.48;Username=st50-14;Password=5014;Database=P-30_Student";
+                var cs = "Host=192.168.1.48;Username=st56-7;Password=567;Database=p-30_user";
                 var con = new NpgsqlConnection(cs);
                 con.Open();
                 var sql = @"DELETE FROM users WHERE login = @login";
@@ -72,7 +72,31 @@ namespace SQLTest
             
 
         }
-
-
+        public bool AddUser(string login, string password, int age,string name)
+        {
+            try
+            {
+                var cs = "Host=192.168.1.48;Username=st56-7;Password=567;Database=p-30_user";
+                var con = new NpgsqlConnection(cs);
+                con.Open();
+                var sql = @"INSERT INTO users (login, password, age, name) VALUES (@login, @password, @age, @name)";
+                var cmd = new NpgsqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@login", login);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@age", age);
+                cmd.Parameters.AddWithValue("@name", name);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}");
+                return false;
+            }
+            
+        }
     }
 }

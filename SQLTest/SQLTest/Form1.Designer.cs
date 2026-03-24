@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.userDataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // AddBtn
             // 
-            this.button1.Location = new System.Drawing.Point(144, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 62);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddBtn.Location = new System.Drawing.Point(161, 247);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(111, 62);
+            this.AddBtn.TabIndex = 0;
+            this.AddBtn.Text = "Добавить";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 156);
+            this.button2.Location = new System.Drawing.Point(28, 247);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 62);
             this.button2.TabIndex = 0;
@@ -59,7 +60,7 @@
             this.userDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
             this.userDataGridView.Location = new System.Drawing.Point(0, 0);
             this.userDataGridView.Name = "userDataGridView";
-            this.userDataGridView.Size = new System.Drawing.Size(800, 150);
+            this.userDataGridView.Size = new System.Drawing.Size(800, 217);
             this.userDataGridView.TabIndex = 1;
             // 
             // Form1
@@ -69,7 +70,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.userDataGridView);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddBtn);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).EndInit();
@@ -79,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView userDataGridView;
     }
