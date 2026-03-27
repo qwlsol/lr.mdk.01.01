@@ -98,5 +98,30 @@ namespace SQLTest
             }
             
         }
+        public bool UpdateUser(User user)
+        {
+            try 
+            {
+                var cs = "Host=192.168.1.48;Username=st56-7;Password=567;Database=p-30_user";
+                var con = new NpgsqlConnection(cs);
+                con.Open();
+                var sql = @"UPDATE users SET  password=@password, age=@age, name=@name WHERE login=@login";
+                var cmd = new NpgsqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@login", user.Login);
+                cmd.Parameters.AddWithValue("@password", user.Password);
+                cmd.Parameters.AddWithValue("@age", user.Age);
+                cmd.Parameters.AddWithValue("@name", user.Name);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}");
+                return false;
+            }
+        }
     }
 }

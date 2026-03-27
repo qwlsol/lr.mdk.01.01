@@ -15,14 +15,16 @@ namespace SQLTest
     public partial class Form1: Form
     {
         PgUsersLoader pgUsersLoader = new PgUsersLoader();
+        
         public Form1()
         {
             InitializeComponent();
             List<User> users = pgUsersLoader.Load();
             userDataGridView.DataSource = users;
+            userDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+          
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void DeleteBtn_Click(object sender, EventArgs e)
         {
             if (userDataGridView.SelectedRows.Count > 0)
             {
@@ -37,17 +39,44 @@ namespace SQLTest
                 List<User> users = pgUsersLoader.Load();
                 userDataGridView.DataSource = users;
 
+
             }
+            
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            AddForm addForm = new AddForm();
+            AddEditForm addForm = new AddEditForm();
             if (addForm.ShowDialog() == DialogResult.OK)
             {
-                pgUsersLoader.AddUser(addForm.textBox1.Text, addForm.textBox2.Text, Convert.ToInt32(addForm.numericUpDown1.Text), addForm.textBox4.Text);
+                pgUsersLoader.AddUser(addForm.textBoxLogin.Text, addForm.textBoxPassword.Text, Convert.ToInt32(addForm.numericUpDownAge.Text), addForm.textBoxName.Text);
                 List<User> users = pgUsersLoader.Load();
                 userDataGridView.DataSource = users;
+            }
+        }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            if (userDataGridView.SelectedRows.Count > 0)
+            {
+                User selectedUser = userDataGridView.SelectedRows[0].DataBoundItem as User;
+                
+                AddEditForm editForm = new AddEditForm(selectedUser);
+                if (editForm.ShowDialog() == DialogResult.OK)
+                {
+                    pgUsersLoader.UpdateUser(selectedUser);
+                    userDataGridView.DataSource = pgUsersLoader.Load();
+                }
+                else 
+                {
+                    MessageBox.Show("Изменения не были применены.");
+                }
+
             }
         }
     }
