@@ -14,12 +14,7 @@ namespace MovieShow
         {
             List<Dish> allDish = new List<Dish>();
 
-            // Используйте относительный путь вместо абсолютного
-            // или создайте папку Data в проекте
-            string path = "C:\\П-30\\MDK01.01\\LR3\\DishRestorant\\data2.csv";
-
-            // Альтернатива: путь относительно исполняемого файла
-            // string path = Path.Combine(Application.StartupPath, "data2.csv");
+           string path = Path.Combine(Application.StartupPath, "data2.csv");
 
             try
             {
